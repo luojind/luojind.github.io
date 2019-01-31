@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/13418954-e4fe649884897d6a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/13418954-d93f3cc0f71db305?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/13418954-aa843908e05e08c4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-01-31T04:28:46.832Z">
+<meta property="og:updated_time" content="2019-01-31T06:17:39.375Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ios多线程 对GCD和死锁的理解">
 <meta name="twitter:description" content="GCD两个函数同步函数dispatch_sync（不具备开启新线程的能力）：把block块放到指定队列中的队尾，等待执行完当前block中的代码之后返回，才继续往下执行操作；  dispatch_sync( dispatch_queue_t  _Nonnull queue ,  ^(void)block );   第一个参数：队列； 第二个参数：block块（存放需执行的代码） 异步函数dispa">
@@ -248,8 +248,7 @@ var _hmt = _hmt || [];
 <p>换句话说，就是有人会产生 <strong>串行队列+同步函数这种组合也会死锁</strong> 的疑问</p>
 <h4 id="我的理解如下"><a href="#我的理解如下" class="headerlink" title="我的理解如下"></a>我的理解如下</h4><p>当程序执行到syncMain方法中的sync函数时，若sync函数没有返回，主线程其实是属于空闲状态，也就是说主线程在等待sync函数返回，等待的这个过程中，主线程没有事做，普通串行队列只要它没事做，就把任务安排进去，而主队列呢，它会先询问主线程是否处于执行某个任务的过程中，只要主线程是在这个过程（不管主线程当前是否空载），它都不会安排任务进主线程</p>
 <h5 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h5><p>一个程序员（主线程）每天上班时间（执行任务的过程）9：00-17：00，某个时间他打码累了，趴在桌子上休息（执行任务过程中的空载状态），他的老板（串行队列）电脑坏了，就让该程序员在休息过程中醒来帮他修电脑（不管主线程是不是处于执行任务的过程，只要它现在没在干活，串行队列就能把任务安排进去）。修完电脑以后，已经到了下班时间，可是产品经理突然要该程序员改一个需求，加班到晚上九点。在加班的过程中，该程序员的女朋友（主队列）打电话，问他下班了没，能不能回家修电灯，她不会修（主队列询问主线程是否繁忙），该程序员回答说现在没空，要加班，那他女朋友只能乖乖地等他下班回去修电灯（主队列等到主线程执行完当前任务才能安排）。</p>
-<p>#传送门</p>
-<p>以下是几个我觉得有学习价值的地方</p>
+<h1 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h1><p>以下是几个我觉得有学习价值的地方</p>
 <ul>
 <li><a href="https://www.zhihu.com/question/23338200" target="_blank" rel="noopener">知乎 GCD相关问题</a></li>
 <li><a href="https://juejin.im/post/5b629d52f265da0f6f1abb3f" target="_blank" rel="noopener">iOS GCD入门和GCD对CPU多核的使用</a></li>
