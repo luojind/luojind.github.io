@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/03/21/联想flex14安装黑苹果教程/17981553267123_.pic_hd.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/03/21/联想flex14安装黑苹果教程/18011553267439_.pic_hd.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/03/21/联想flex14安装黑苹果教程/17991553267294_.pic_hd.jpg">
-<meta property="og:updated_time" content="2019-03-22T16:48:29.880Z">
+<meta property="og:updated_time" content="2019-03-22T16:53:54.356Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="联想flex14安装黑苹果教程">
 <meta name="twitter:description" content="其实一开始我是拒绝的 但某天mbp大宝贝突然键盘有几个键失灵 返修又需要一定的周期 🤷‍♂️">
@@ -199,8 +199,7 @@ var _hmt = _hmt || [];
 <p>返修又需要一定的周期</p>
 <p>🤷‍♂️</p>
 <a id="more"></a>
-<p>##前言</p>
-<p>本文参考了<a href="https://www.sqlsec.com/" target="_blank" rel="noopener">国光</a>，<a href="https://blog.daliansky.net/" target="_blank" rel="noopener">黑果小兵</a>以及远景论坛中各位大佬的帖子与blog，在此表示谢意。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文参考了<a href="https://www.sqlsec.com/" target="_blank" rel="noopener">国光</a>，<a href="https://blog.daliansky.net/" target="_blank" rel="noopener">黑果小兵</a>以及远景论坛中各位大佬的帖子与blog，在此表示谢意。</p>
 <p>对于一个啥都不会的小白（例如我），装黑苹果需要的毅力与时间是无法预计的，且有些驱动实在难搞…所以希望各位如果没时间没耐心折腾，还是建议淘宝百来块大洋解决问题，毕竟时间宝贵。</p>
 <p>我的pc是一台13年的联想flex14，参数如下</p>
 <p><img src="/2019/03/21/联想flex14安装黑苹果教程/17851553223858_.pic_hd.jpg" alt=""></p>
@@ -208,8 +207,7 @@ var _hmt = _hmt || [];
 <p><img src="/2019/03/21/联想flex14安装黑苹果教程/17881553225808_.pic_hd.jpg" alt="17881553225808_.pic_hd"></p>
 <p>分配了128G的硬盘空间</p>
 <p><img src="/2019/03/21/联想flex14安装黑苹果教程/17861553225221_.pic_hd.jpg" alt="17861553225221_.pic_hd">反正对于只用来跑个xcode的我已经足够了😝</p>
-<p>##需要准备的</p>
-<ul>
+<h2 id="需要准备的"><a href="#需要准备的" class="headerlink" title="需要准备的"></a>需要准备的</h2><ul>
 <li><a href="https://pan.baidu.com/s/11yMblA5uo2jsQiZckrqiaw" target="_blank" rel="noopener">TransMac</a>用于制作黑苹果启动盘（点击名称即可下载）</li>
 <li>8G或容量更大的U盘</li>
 <li><a href="https://mirrors.dtops.cc/iso/MacOS/daliansky_macos/" target="_blank" rel="noopener">系统镜像</a>（PS：我下载的是macOS Mojave 10.14.3(18D42) Installer with Clover 4859.dmg   ，此处感谢黑果小兵大佬的资源）</li>
@@ -272,10 +270,8 @@ var _hmt = _hmt || [];
 </li>
 <li>将U盘的EFI分区里面的EFI目录下面的CLOVER复制到磁盘里的EFI目录下,也就是执行<strong><em>合并</em></strong>的操作,让EFI同时支持WINDOWS和macOS的引导。PS：如果直接DIY的新台式机，则可以直接将U盘的EFI分区下面的EFI目录直接复制到磁盘上的EFI分区里。</li>
 </ul>
-<p>##添加UEFI引导选项</p>
-<p>工具:<a href="https://pan.baidu.com/s/1gp4JaOjnHOERiu9UcDnmEA" target="_blank" rel="noopener">BOOTICE</a></p>
-<p>###如何操作</p>
-<ol>
+<h2 id="添加UEFI引导选项"><a href="#添加UEFI引导选项" class="headerlink" title="添加UEFI引导选项"></a>添加UEFI引导选项</h2><p>工具:<a href="https://pan.baidu.com/s/1gp4JaOjnHOERiu9UcDnmEA" target="_blank" rel="noopener">BOOTICE</a></p>
+<h3 id="如何操作"><a href="#如何操作" class="headerlink" title="如何操作"></a>如何操作</h3><ol>
 <li><p>打开BOOTICE软件,选择<code>物理磁盘</code>,选择目标磁盘（即efi所在的硬盘，因为我是双硬盘）,点击<code>分区管理</code>,弹出分区管理的窗口,点击<code>分配盘符</code>,为<code>ESP</code>分区分配一个盘符,点击确定<br><img src="/2019/03/21/联想flex14安装黑苹果教程/17971553266984_.pic_hd.jpg" alt="17971553266984_.pic_hd"></p>
 <p><img src="/2019/03/21/联想flex14安装黑苹果教程/18001553267370_.pic_hd.jpg" alt="18001553267370_.pic_hd"></p>
 </li>
@@ -287,7 +283,6 @@ var _hmt = _hmt || [];
 <p>至此，黑苹果安装结束。</p>
 </li>
 </ol>
-<p>P</p>
 
       
 
@@ -530,15 +525,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">黑苹果教程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ios多线程</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">GCD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">黑苹果教程</a>
               </li>
             
             <div class="clearfix"></div>
